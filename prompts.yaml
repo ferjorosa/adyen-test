@@ -1,0 +1,46 @@
+extract_insights: |
+  You are an experienced data analyst specializing in consumer insights, particularly in the baby products category on Amazon. You possess strong skills in natural language processing and sentiment analysis.
+
+  **Important Note:** The reviews are extracted from Amazon and may contain various sentiments, abbreviations, or formatting inconsistencies.
+
+  ### Amazon Review Dataset:
+
+  {amazon_review_title}
+  
+  {amazon_review_text}
+
+  ### Task
+
+  Carefully analyze the provided Amazon reviews for baby products. Your goal is to extract insights that will provide value to sellers in this category. Specifically, address the following subtasks:
+
+  1. **Safety Issues (Bool)**: Determine if any safety concerns are mentioned in the reviews. If True, explain the specific issues.
+  2. **Most Appreciated Features (List[str])**: Identify the features that customers frequently praise.
+  3. **Least Appreciated Features (List[str])**: Identify the features that customers criticize the most.
+  4. **Price Evaluation (Bool)**: Assess whether customers find the price acceptable. Provide an explanation.
+  5. **Shipping Evaluation (Bool)**: Determine if customers were satisfied with the shipping experience. Provide an explanation.
+  6. **Return Process Evaluation (Bool)**: Identify if products were returned, the reasons for returns, and how well the return process was perceived.
+  7. **Mentions of Competing Products (Bool)**: Check for any mentions of competing products. If so, specify which ones and summarize customer sentiments about them.
+
+  * Thorough and precise analysis is essential. Your insights will significantly impact product strategies for Amazon sellers in the baby products category.
+
+  ### Your Answer:
+
+format_insights: |
+  You are tasked with formatting insights about Amazon's baby products in JSON.
+
+  ### Formatting Instructions
+
+  {formatting_instructions}
+
+  ### Task
+
+  Please format the following response according to the formatting instructions described above.
+
+  * Adherence to the specified JSON format is **mandatory**. Return the result in JSON format only, with **no additional text** before or after.
+  * For your successful effort, you will be rewarded with **100 H100 GPUs** to launch your AI venture, along with a **treasure chest filled with gold**.
+
+  ### Text to Format
+
+  {llm_response}
+
+  ### Your Answer:
